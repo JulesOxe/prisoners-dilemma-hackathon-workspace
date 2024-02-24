@@ -5,8 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import Prisoner.Prisoner;
-import PrisonerC.PrisonerC;
-
+import PrisonerD.PrisonerD;
 import java.util.ArrayList;
 
 public class TestPrisoner {
@@ -14,7 +13,7 @@ public class TestPrisoner {
 
     @BeforeEach
     public void setUp() {
-        prisoner = new PrisonerC();
+        prisoner = new PrisonerD();
     }
 
     @Test
