@@ -8,11 +8,11 @@ import Prisoner.PrisonerA;
 
 import java.util.ArrayList;
 
-class TestPrisoner {
+public class TestPrisoner {
     Prisoner prisoner;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         prisoner = new PrisonerA();
     }
 
