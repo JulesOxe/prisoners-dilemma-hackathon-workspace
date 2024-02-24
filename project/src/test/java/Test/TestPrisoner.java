@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import Prisoner.Prisoner;
 import PrisonerD.PrisonerD;
-
 import java.util.ArrayList;
 
 public class TestPrisoner {
