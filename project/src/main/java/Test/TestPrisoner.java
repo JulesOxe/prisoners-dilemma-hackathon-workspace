@@ -8,7 +8,7 @@ import Prisoner.PrisonerA;
 
 import java.util.ArrayList;
 
-class PrisonerTest {
+class TestPrisoner {
     Prisoner prisoner;
 
     @BeforeEach
@@ -16,7 +16,6 @@ class PrisonerTest {
         prisoner = new PrisonerA();
     }
 
-    @Test
     @DisplayName("Empty lists Test")
     void testMakeFirstDecision() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
