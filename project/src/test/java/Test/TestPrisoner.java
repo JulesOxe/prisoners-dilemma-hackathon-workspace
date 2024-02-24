@@ -2,9 +2,10 @@ package Test;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import Prisoner.Prisoner;
-import Prisoner.PrisonerB;
+import PrisonerX.PrisonerX;
 
 import java.util.ArrayList;
 
@@ -13,10 +14,11 @@ public class TestPrisoner {
 
     @BeforeEach
     public void setUp() {
-        prisoner = new PrisonerB();
+        prisoner = new PrisonerX();
     }
 
     @Test
+    @Order(1)
     @DisplayName("Empty lists Test")
     void testMakeFirstDecision() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
@@ -24,6 +26,7 @@ public class TestPrisoner {
     }
 
     @Test
+    @Order(2)
     @DisplayName("Both last decisions true")
     void testBothTrue() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
@@ -36,6 +39,7 @@ public class TestPrisoner {
     }
 
     @Test
+    @Order(3)
     @DisplayName("Both last decisions false")
     void testBothFalse() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
@@ -48,6 +52,7 @@ public class TestPrisoner {
     }
 
     @Test
+    @Order(4)
     @DisplayName("My last decision true, opponent last decision false")
     void testTrueAndFalse() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
@@ -60,6 +65,7 @@ public class TestPrisoner {
     }
 
     @Test
+    @Order(5)
     @DisplayName("My last decision true, opponent last decision false")
     void testFalseAndTrue() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
