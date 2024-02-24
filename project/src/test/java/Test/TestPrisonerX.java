@@ -5,15 +5,15 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import Prisoner.Prisoner;
-import PrisonerD.PrisonerD;
+import PrisonerX.PrisonerX;
 import java.util.ArrayList;
 
-public class TestPrisoner {
+public class TestPrisonerX {
     Prisoner prisoner;
 
     @BeforeEach
     public void setUp() {
-        prisoner = new PrisonerD();
+        prisoner = new PrisonerX();
     }
 
     @Test

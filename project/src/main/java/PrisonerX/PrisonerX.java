@@ -1,21 +1,21 @@
-package PrisonerD;
+package PrisonerX;
 
 import Prisoner.Prisoner;
 
 import java.util.ArrayList;
 
-public class PrisonerD extends Prisoner {
+public class PrisonerX extends Prisoner {
 
     //TODO set your team name
-    public PrisonerD() {
-        teamName = "test";
+    public PrisonerX() {
+        teamName = "";
     }
 
 
     //TODO implement the decision making process
     public Boolean makeDecision(ArrayList<Boolean> myDecisions, ArrayList<Boolean> opponentDecisions) {
 
-        return true;
+        return false;
     }
 
     //TODO if you need to reset any variables at the end of each game, do so here
