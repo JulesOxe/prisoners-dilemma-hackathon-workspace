@@ -1,13 +1,13 @@
-package PrisonerX;
+package PrisonerC;
 
 import Prisoner.Prisoner;
 
 import java.util.ArrayList;
 
-public class PrisonerX extends Prisoner {
+public class PrisonerC extends Prisoner {
 
     //TODO set your team name
-    public PrisonerX() {
+    public PrisonerC() {
         teamName = "";
     }
 
