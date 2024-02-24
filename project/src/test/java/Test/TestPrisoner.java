@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import Prisoner.Prisoner;
-import Prisoner.PrisonerA;
+import Prisoner.PrisonerX;
 
 import java.util.ArrayList;
 
@@ -13,9 +13,10 @@ public class TestPrisoner {
 
     @BeforeEach
     public void setUp() {
-        prisoner = new PrisonerA();
+        prisoner = new PrisonerX();
     }
 
+    @Test
     @DisplayName("Empty lists Test")
     void testMakeFirstDecision() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
@@ -24,19 +25,19 @@ public class TestPrisoner {
 
     @Test
     @DisplayName("Both last decisions true")
-    void testBothTrue(){
-       Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
-       ArrayList<Boolean> myDecisionTrue = new ArrayList<>();
-       myDecisionTrue.add(true);
-       ArrayList<Boolean> opponentDecisionTrue = new ArrayList<>();
-       opponentDecisionTrue.add(true);
-       Boolean secondDecision = prisoner.makeDecision(myDecisionTrue, opponentDecisionTrue);
-         assert !secondDecision || secondDecision : "Function can handle both last decisions true";
+    void testBothTrue() {
+        Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
+        ArrayList<Boolean> myDecisionTrue = new ArrayList<>();
+        myDecisionTrue.add(true);
+        ArrayList<Boolean> opponentDecisionTrue = new ArrayList<>();
+        opponentDecisionTrue.add(true);
+        Boolean secondDecision = prisoner.makeDecision(myDecisionTrue, opponentDecisionTrue);
+        assert !secondDecision || secondDecision : "Function can handle both last decisions true";
     }
 
     @Test
     @DisplayName("Both last decisions false")
-    void testBothFalse(){
+    void testBothFalse() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
         ArrayList<Boolean> myDecisionFalse = new ArrayList<>();
         myDecisionFalse.add(false);
@@ -48,7 +49,7 @@ public class TestPrisoner {
 
     @Test
     @DisplayName("My last decision true, opponent last decision false")
-    void testTrueAndFalse(){
+    void testTrueAndFalse() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
         ArrayList<Boolean> myDecisionTrue = new ArrayList<>();
         myDecisionTrue.add(true);
@@ -60,7 +61,7 @@ public class TestPrisoner {
 
     @Test
     @DisplayName("My last decision true, opponent last decision false")
-    void testFalseAndTrue(){
+    void testFalseAndTrue() {
         Boolean firstDecision = prisoner.makeDecision(new ArrayList<>(), new ArrayList<>());
         ArrayList<Boolean> myDecisionFalse = new ArrayList<>();
         myDecisionFalse.add(false);
