@@ -1,14 +1,15 @@
+package Prisoner;
+
 import java.util.ArrayList;
 
-public class PrisonerC extends Prisoner {
+public class PrisonerA extends Prisoner {
 
-    public PrisonerC() {
-        teamName = "Random";
+    public PrisonerA() {
+        teamName = "AlwaysFalse";
     }
 
     public Boolean makeDecision(ArrayList<Boolean> myDecisions, ArrayList<Boolean> opponentDecisions) {
-        double random = (Math.random() * 10) + 1;
-        return random > 5;
+        return false;
     }
 
     public void reset() {

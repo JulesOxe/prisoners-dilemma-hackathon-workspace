@@ -1,3 +1,5 @@
+package Prisoner;
+
 /**
  * Abstract class for a prisoner module, which generates a decision based on the previous decisions of the opponent and the prisoner itself
  */
